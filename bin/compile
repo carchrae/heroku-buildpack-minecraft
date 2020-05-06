@@ -38,9 +38,6 @@ apt-get $APT_OPTIONS update -y | indent
 apt-get $APT_OPTIONS -y --allow-downgrades --allow-remove-essential --allow-change-held-packages -d install --reinstall screen | indent
 mkdir -p $BUILD_DIR/.apt/var/run/screen
 
-echo "installing s3cmd"
-apt-get $APT_OPTIONS -y --allow-downgrades --allow-remove-essential --allow-change-held-packages -d install --reinstall s3cmd | indent
-
 mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF >$BUILD_DIR/.profile.d/000_apt.sh
 export PATH="\$HOME/.apt/usr/bin:\$PATH"
