@@ -64,7 +64,7 @@ echo "done"
 minecraft_version=${MINECRAFT_VERSION:-"1.15.2"}
 
 # use papermc
-curl -o $BUILD_DIR/minecraft.jar https://papermc.io/api/v1/paper/${MINECRAFT_VERSION}/latest/download
+curl -o $BUILD_DIR/minecraft.jar https://papermc.io/api/v1/paper/${minecraft_version}/latest/download
 
 #if echo "$minecraft_version" | grep -q '^1\.15.*$'; then
 #  minecraft_uuid="${MINECRAFT_UUID:="bb2b6b1aefcd70dfd1892149ac3a215f6c636b07"}"
